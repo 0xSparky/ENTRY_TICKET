@@ -3,9 +3,11 @@ stored_data = ''
 total_cost = 0
 while True:
 
-    print('\n1. Add an item')
+    print()
+    print('1. Add an item')
     print('2. Print currently added items')
-    print('3. Finished\n')
+    print('3. Finished')
+    print()
 
     choice = input('Enter your choice: ')
 
