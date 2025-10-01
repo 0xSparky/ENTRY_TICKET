@@ -1,7 +1,8 @@
 title = input("Enter the title: ")
 shopping_list = ""
 
-while True:
+while True: 
+    
     print()
     print("1. Add an item")
     print("2. Print currently added items")
@@ -37,3 +38,4 @@ while True:
         print("Error: Invalid choice, please try again.")
 
  
+
