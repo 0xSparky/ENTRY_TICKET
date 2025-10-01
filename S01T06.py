@@ -5,10 +5,10 @@ shopping_list = ''
 while True:
 
     print()
-    print('\n1. Add an item')
+    print('1. Add an item')
     print('2. Print currently added items')
     print('3. Finished')
-    print('C. Change title\n')
+    print('C. Change title')
     print()
 
     choice = input('Enter your choice: ')
