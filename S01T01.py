@@ -16,8 +16,6 @@ while True:
         count = int(input('How many:'))
         stored_data += (data + '\n')
         total_cost += (price * count) 
-
-        continue
     
     elif choice == '2':
         print('Currently added items:')
@@ -35,4 +33,3 @@ while True:
 
     else:
         print('Error: Invalid choice, please try again.')
-        continue
