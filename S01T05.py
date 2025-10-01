@@ -4,6 +4,7 @@ shopping_list = ''
 price = 0
 
 while True:
+    
     print()
     print('1. Add an item')
     print('2. Print currently added items')
@@ -35,4 +36,5 @@ while True:
         
     else:
         print('Error: Invalid choice, please try again.')
+
 
