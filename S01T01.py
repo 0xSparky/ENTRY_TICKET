@@ -9,7 +9,6 @@ while True:
 
     choice = input('Enter your choice: ')
 
-
     if choice == '1':
         data = input('Enter an item: ')
         price = int(input('Price: '))
@@ -30,6 +29,5 @@ while True:
         print()
         break
         
-
     else:
         print('Error: Invalid choice, please try again.')
