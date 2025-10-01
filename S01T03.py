@@ -3,15 +3,17 @@ title = input('Enter the title:')
 shopping_list = '' 
 
 while True:
-    print('\n1. Add an item')
+    print()
+    print('1. Add an item')
     print('2. Print currently added items')
-    print('3. Finished\n')
+    print('3. Finished')
+    print()
 
     choice = int(input('Enter your choice: '))
     
     if choice == 1:
         item = input('Enter an item: ')
-        quantity = int(input('Enter quantity:')) #changed from float to int
+        quantity = int(input('Enter quantity:')) 
         formatted = f'{item:<10}x{quantity:>9}'
         
         shopping_list += formatted + '\n'
@@ -29,6 +31,7 @@ while True:
     
     else:
         print('Error: Invalid choice, please try again.')
+
 
 
 
