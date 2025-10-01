@@ -13,7 +13,6 @@ while True:
     if choice == '1':
         data = input('Enter an item: ')
         stored_data += (data + '\n')
-        continue
     
     elif choice == '2':
         print('Currently added items:')
@@ -30,4 +29,3 @@ while True:
 
     else:
         print('Error: Invalid choice, please try again.')
-        continue
