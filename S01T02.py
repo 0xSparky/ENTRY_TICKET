@@ -4,10 +4,10 @@ shopping_list= ''
 counter_item= 0
 while True :
 
-    print('1. Add an item')
+    print('\n1. Add an item')
     print('2. Print currently added items')
     print('3. Finished')
-    print('S. Show number of addded items')
+    print('S. Show number of addded items\n')
 
     choice=input('Enter your choice: ')
     
@@ -32,6 +32,7 @@ while True :
         
     else: #moved this back here so that it works
         print('Error: Invalid choice, please try again.')
+
 
 
 
