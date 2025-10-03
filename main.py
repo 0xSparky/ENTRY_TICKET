@@ -1,6 +1,6 @@
 title = input('Enter the title: ')
 stored_data = ''
-count = 0
+
 while True:
 
     print('\n1. Add an item')
@@ -8,7 +8,6 @@ while True:
     print('3. Finished\n')
 
     choice = input('Enter your choice: ')
-
 
     if choice == '1':
         data = input('Enter an item: ')
@@ -25,7 +24,6 @@ while True:
         print(stored_data)
         print()
         break
-        
 
     else:
         print('Error: Invalid choice, please try again.')
