@@ -24,6 +24,6 @@ while True:
         print(stored_data)
         print()
         break
-        
+
     else:
         print('Error: Invalid choice, please try again.')
