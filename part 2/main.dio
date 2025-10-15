@@ -99,10 +99,13 @@
         </mxGraphModel>
     </diagram>
     <diagram id="OlVqYfoOg868X_6U3nZh" name="Page-2">
-        <mxGraphModel dx="746" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+        <mxGraphModel dx="986" dy="419" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-2" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="Jzz3el8EdK12EC5FOIHX-1" target="AsASTPI-1hx3HJ0esAKv-1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
                 <mxCell id="Jzz3el8EdK12EC5FOIHX-1" value="start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="90" y="70" width="120" height="80" as="geometry"/>
                 </mxCell>
@@ -111,6 +114,60 @@
                 </mxCell>
                 <mxCell id="Jzz3el8EdK12EC5FOIHX-2" value="new test subject" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
                     <mxGeometry x="70" y="10" width="160" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-4" style="edgeStyle=none;html=1;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-1" target="AsASTPI-1hx3HJ0esAKv-3">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-1" value="taking input&lt;div&gt;number, duration&lt;/div&gt;&lt;div&gt;as int&amp;nbsp;&lt;/div&gt;" style="shape=parallelogram;perimeter=parallelogramPerimeter;whiteSpace=wrap;html=1;fixedSize=1;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-13" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-3" target="AsASTPI-1hx3HJ0esAKv-10">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-3" value="return as tuple" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="320" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-7" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-5" target="AsASTPI-1hx3HJ0esAKv-6">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-5" value="write data" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="440" y="10" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-14" style="edgeStyle=none;html=1;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-6" target="AsASTPI-1hx3HJ0esAKv-8">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-6" value="start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="70" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-15" style="edgeStyle=none;html=1;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-8" target="AsASTPI-1hx3HJ0esAKv-9">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-8" value="test_subjects = [ tuple]" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="200" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-12" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-9" target="AsASTPI-1hx3HJ0esAKv-11">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-9" value="open the file in write mode and write data from test_subjects and close" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="310" width="120" height="60" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-10" value="end" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="90" y="420" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-11" value="end" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="410" y="420" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-18" style="edgeStyle=none;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="AsASTPI-1hx3HJ0esAKv-16" target="AsASTPI-1hx3HJ0esAKv-17">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-16" value="&#xa;&lt;span class=&quot;css-jqjy6f-view--flex-flex&quot; wrap=&quot;no-wrap&quot; direction=&quot;row&quot; dir=&quot;ltr&quot;&gt;&lt;span class=&quot;css-127lj96-view&quot; dir=&quot;ltr&quot;&gt;&lt;strong style=&quot;font-family: inherit; font-size: 1rem;&quot;&gt;read_data&lt;/strong&gt;&lt;/span&gt;&lt;/span&gt;&#xa;&#xa;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+                    <mxGeometry x="100" y="585" width="60" height="30" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-17" value="start" style="ellipse;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="660" width="120" height="80" as="geometry"/>
+                </mxCell>
+                <mxCell id="AsASTPI-1hx3HJ0esAKv-19" value="open the file in read mode and&amp;nbsp;&amp;nbsp;" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                    <mxGeometry x="70" y="790" width="120" height="60" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>
