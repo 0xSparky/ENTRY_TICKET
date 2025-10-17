@@ -4,6 +4,7 @@ test_subjects = [] # empty list
 
 # menu function
 def print_menu():
+    print()
     print('-' * 9, ' Menu ', '-' * 10, sep='')
     print('a) Add a new test subject')
     print('s) Show all information')
@@ -11,6 +12,7 @@ def print_menu():
     print('w) Write to file')
     print('q) Quit')
     print('-' * 25)
+    print()
 
 # adding new test subject  == a)
 def new_test_subject():
@@ -29,7 +31,6 @@ def write_data(test_subjects, filename):
 
 # read data                 == r)
 def read_data(filename):
-    file_item = []
     with open(filename, 'r') as file:
         file = [line.strip() for line in file.readlines()]
 
@@ -37,8 +38,10 @@ def read_data(filename):
             number = file[i]
             time = file[i + 1]
 
-            file_item.append((number, time))
-    print(file_item)
+            test_subjects.append((number, time))
+
+    print()
+    print('*' * 3, 'Data read from file', '*' * 3, sep=' ')
 
 # print test subjects       == s)
 def print_test_subjects(test_subjects):
