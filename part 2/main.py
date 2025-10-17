@@ -14,7 +14,11 @@ def print_menu():
 
 # adding new test subject  == a)
 def new_test_subject():
-    pass
+    number = int(input('Number: '))
+    time = int(input('Time: '))
+    print()
+    initial_value = tuple([number, time])
+    test_subjects.append(initial_value)
 
 # write data to file        == w)
 def write_data(test_subjects, filename):
@@ -26,7 +30,12 @@ def read_data(filename):
 
 # print test subjects       == s)
 def print_test_subjects(test_subjects):
-    pass
+    print('-' * 4, 'Registered test subjects', '-' * 4, sep=' ')
+    if test_subjects != '':
+        for i,j in test_subjects:
+            print(f"Number : {i}")
+            print(f"Time   : {j}")
+            print()
 
 
 
