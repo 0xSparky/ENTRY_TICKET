@@ -22,11 +22,23 @@ def new_test_subject():
 
 # write data to file        == w)
 def write_data(test_subjects, filename):
-    pass
+    with open(filename, 'w') as f:
+        for number, time in test_subjects:
+            f.write(f"{number}\n{time} \n")
+        
 
 # read data                 == r)
 def read_data(filename):
-    pass
+    file_item = []
+    with open(filename, 'r') as file:
+        file = [line.strip() for line in file.readlines()]
+
+        for i in range (0, len(file), 2):
+            number = file[i]
+            time = file[i + 1]
+
+            file_item.append((number, time))
+    print(file_item)
 
 # print test subjects       == s)
 def print_test_subjects(test_subjects):
