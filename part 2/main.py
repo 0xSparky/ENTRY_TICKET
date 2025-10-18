@@ -1,7 +1,5 @@
 #!/bin/python3
 
-test_subjects = [] # empty list
-
 # menu function
 def print_menu():
     print()
@@ -16,61 +14,65 @@ def print_menu():
 
 # adding new test subject  == a)
 def new_test_subject():
-    number = int(input('Number: '))
-    time = int(input('Time: '))
+    number = (input('Number :   '))
+    time = int(input('Time   :   '))
     print()
-    initial_value = tuple([number, time])
-    test_subjects.append(initial_value)
+    return (number, time)
 
 # write data to file        == w)
 def write_data(test_subjects, filename):
-    with open(filename, 'w') as f:
+    with open(filename, 'w+') as f:
         for number, time in test_subjects:
-            f.write(f"{number}\n{time} \n")
+            f.write(f'{number}\n{time}\n')
         
 
 # read data                 == r)
 def read_data(filename):
+    data = [] # empty list to contain tuple
     with open(filename, 'r') as file:
-        file = [line.strip() for line in file.readlines()]
+        lines = [line.strip() for line in file.readlines()] # making a temporary list to store single data
 
-        for i in range (0, len(file), 2):
-            number = file[i]
-            time = file[i + 1]
-
-            test_subjects.append((number, time))
-
-    print()
-    print('*' * 3, 'Data read from file', '*' * 3, sep=' ')
+        for i in range (0, len(lines), 2):
+            number = lines[i]
+            time = int(lines[i + 1])
+            data.append((number,time))
+    return data
 
 # print test subjects       == s)
 def print_test_subjects(test_subjects):
     print('-' * 4, 'Registered test subjects', '-' * 4, sep=' ')
     if test_subjects != '':
         for i,j in test_subjects:
-            print(f"Number : {i}")
-            print(f"Time   : {j}")
+            print(f"Number :{i:>5}")
+            print(f"Time   :{j:>5}")
             print()
 
 
 
 
 def main():
+    test_subjects = [] # empty list
     while True:
         print_menu()
         
         choice = input('Your choice: ')
 
         if choice == 'a':
-            new_test_subject()
+            test_subjects.append(new_test_subject())
+
         elif choice == 's':
             print_test_subjects(test_subjects)
+
         elif choice == 'r':
             filename = input('Filename: ')
-            read_data(filename)
+            test_subjects = read_data(filename)
+            print()
+            print('*' * 3, 'Data read from file', '*' * 3, sep=' ')
+
         elif choice == 'w':
             filename = input('Filename: ')
             write_data(test_subjects, filename)
+            
         elif choice == 'q':
             break
         else:
