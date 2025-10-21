@@ -8,6 +8,7 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
+    print('T) Find time in file')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -72,11 +73,21 @@ def main():
         elif choice == 'w':
             filename = input('Filename: ')
             write_data(test_subjects, filename)
+
+        elif choice == 'T':
+            filename = input('Filename: ')
+            number = (input('Number: '))
+
+            test_subjects = read_data(filename)
+
+            for num, time in test_subjects:
+                if num == number:
+                    print(f'Test subject {number} ran around the lake in {time} minutes.')
             
         elif choice == 'q':
             break
         else:
-            continue
+            print(test_subjects)
 
 
 if __name__ == '__main__':

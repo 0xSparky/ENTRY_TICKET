@@ -8,6 +8,7 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
+    print('F) Add new test subject directly to file')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -72,7 +73,16 @@ def main():
         elif choice == 'w':
             filename = input('Filename: ')
             write_data(test_subjects, filename)
+        
+        elif choice == 'F':
+            filename = input('Filename: ')
+            number = input('Number: ')
+            time = input('Time: ')
             
+            with open(filename, 'a') as file:
+                file.write(f"{number}\n{time}\n")
+
+
         elif choice == 'q':
             break
         else:
