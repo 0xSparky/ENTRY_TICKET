@@ -41,7 +41,7 @@ def read_data(filename):
 # print test subjects       == s)
 def print_test_subjects(test_subjects):
     print('-' * 4, 'Registered test subjects', '-' * 4, sep=' ')
-    if test_subjects != '':
+    if test_subjects != []:
         for i,j in test_subjects:
             print(f"Number :{i:>5}")
             print(f"Time   :{j:>5}")
