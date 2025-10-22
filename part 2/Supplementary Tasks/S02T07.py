@@ -8,7 +8,7 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
-    print('T) Find time in file')
+    print('V) Validate number')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -49,6 +49,13 @@ def print_test_subjects(test_subjects):
             print()
 
 
+# validate 
+def validate(number):
+    if number >= 1 and number <= 100 and number % 2 == 1:
+        return True
+    else:
+        return False
+
 
 
 def main():
@@ -74,20 +81,17 @@ def main():
             filename = input('Filename: ')
             write_data(test_subjects, filename)
 
-        elif choice == 'T':
-            filename = input('Filename: ')
-            number = (input('Number: '))
-
-            test_subjects = read_data(filename)
-
-            for num, time in test_subjects:
-                if num == number:
-                    print(f'Test subject {number} ran around the lake in {time} minutes.')
+        elif choice == 'V':
+            number = int(input('Number: '))
+            if validate(number):
+                print('The number is valid.')
+            else:
+                print('The number is NOT valid.')
             
         elif choice == 'q':
             break
         else:
-            print(test_subjects)
+            continue
 
 
 if __name__ == '__main__':

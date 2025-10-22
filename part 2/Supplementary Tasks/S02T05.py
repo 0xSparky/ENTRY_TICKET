@@ -8,7 +8,7 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
-    print('T) Find time in file')
+    print('H) Show history')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -53,10 +53,12 @@ def print_test_subjects(test_subjects):
 
 def main():
     test_subjects = [] # empty list
+    history_list = []
     while True:
         print_menu()
         
         choice = input('Your choice: ')
+        history_list.append(choice)
 
         if choice == 'a':
             test_subjects.append(new_test_subject())
@@ -74,20 +76,16 @@ def main():
             filename = input('Filename: ')
             write_data(test_subjects, filename)
 
-        elif choice == 'T':
-            filename = input('Filename: ')
-            number = (input('Number: '))
-
-            test_subjects = read_data(filename)
-
-            for num, time in test_subjects:
-                if num == number:
-                    print(f'Test subject {number} ran around the lake in {time} minutes.')
+        elif choice == 'H':
+            print('History\n-------')
+            
+            for i in history_list:
+                print(i)
             
         elif choice == 'q':
             break
         else:
-            print(test_subjects)
+            continue
 
 
 if __name__ == '__main__':

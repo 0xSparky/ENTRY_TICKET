@@ -8,7 +8,6 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
-    print('T) Find time in file')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -16,7 +15,7 @@ def print_menu():
 # adding new test subject  == a)
 def new_test_subject():
     number = (input('Number :   '))
-    time = int(input('Time   :   '))
+    time = read_int('Time   : ')
     print()
     return (number, time)
 
@@ -48,6 +47,14 @@ def print_test_subjects(test_subjects):
             print(f"Time   :{j:>5}")
             print()
 
+def read_int(prompt):
+    while True:
+        try:
+            value = int(input(prompt))
+            return value
+        except ValueError:
+            print('ERROR: Please enter an integer number.')
+
 
 
 
@@ -73,21 +80,11 @@ def main():
         elif choice == 'w':
             filename = input('Filename: ')
             write_data(test_subjects, filename)
-
-        elif choice == 'T':
-            filename = input('Filename: ')
-            number = (input('Number: '))
-
-            test_subjects = read_data(filename)
-
-            for num, time in test_subjects:
-                if num == number:
-                    print(f'Test subject {number} ran around the lake in {time} minutes.')
             
         elif choice == 'q':
             break
         else:
-            print(test_subjects)
+            continue
 
 
 if __name__ == '__main__':

@@ -8,7 +8,7 @@ def print_menu():
     print('s) Show all information')
     print('r) Read from file')
     print('w) Write to file')
-    print('T) Find time in file')
+    print('T) Test subjects in range')
     print('q) Quit')
     print('-' * 25)
     print()
@@ -48,6 +48,15 @@ def print_test_subjects(test_subjects):
             print(f"Time   :{j:>5}")
             print()
 
+# filter_range
+def filter_range(subjects, min, max):
+    final_list = [] # empty list to store after filtering
+
+    for number, time in subjects:
+        if time >= min and time <= max:
+            final_list.append(number)
+
+    return final_list
 
 
 
@@ -75,19 +84,18 @@ def main():
             write_data(test_subjects, filename)
 
         elif choice == 'T':
-            filename = input('Filename: ')
-            number = (input('Number: '))
+            min = int(input("Min: "))
+            max = int(input("Max: "))
 
-            test_subjects = read_data(filename)
+            filtered_list = filter_range(test_subjects, min, max)
+            for i in filtered_list:
+                print(i)
 
-            for num, time in test_subjects:
-                if num == number:
-                    print(f'Test subject {number} ran around the lake in {time} minutes.')
             
         elif choice == 'q':
             break
         else:
-            print(test_subjects)
+            continue
 
 
 if __name__ == '__main__':
